@@ -405,10 +405,16 @@ window.location.replace("login.html?tm=" + tm);
 	</script>
 	
 		
+
 <script>		
 
 if( 
-	window.xx && window.xx.InApp.Browser
+	
+	window.cordova
+	
+	//&& window.cordova.InApp.Browser
+	
+	//window.xx && window.xx.InApp.Browser
 	
 	//!cordova
 
@@ -422,6 +428,34 @@ alert("cordova yes ");
 }else{
 
 alert("cordova no ");		
+
+}
+
+
+</script>	
+	
+	
+
+<script>		
+
+if( 
+	
+	window.cordova && window.cordova.InApp.Browser
+	
+	//window.xx && window.xx.InApp.Browser
+	
+	//!cordova
+
+// or !cordova
+
+){
+
+alert("cordova yes both ");	
+
+
+}else{
+
+alert("cordova no both ");		
 
 }
 
