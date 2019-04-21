@@ -8,55 +8,6 @@
 	
 <script src="js/jquery-1.10.2.min.js" ></script>
 
-<script>
-
-            function onBackKeyDown() {
-                'use strict';
-                
-                var frame = window.frames[0].window;
-
-                if(frame.bCurrentLocationIsHome == true) {
-                    navigator.app.exitApp();
-                } else {
-                    frame.location.reload();
-                }
-                return false;
-            }
-            var onDeviceReady = function() {
-                'use strict';
-                
-                setDeviceInfo();
-                document.addEventListener("backbutton", onBackKeyDown, false);
-            }
-
-            function onLoad() {
-                'use strict';
-
-                if (typeof navigator.device == 'undefined' && window.location.host != '127.0.0.1'){
-                    document.addEventListener("deviceready", onDeviceReady, false);
-                } else {
-                    onDeviceReady();
-                }  
-            }
-
-            function setDeviceInfo() {
-                pgDeviceInfo = '';
-                if (window.location.host != '127.0.0.1'){
-                    pgDeviceInfo += '<p><b>device.name: </b>' + device.name + '</p>';
-                    pgDeviceInfo += '<p><b>device.model: </b>' + device.model + '</p>';
-                    pgDeviceInfo += '<p><b>device.cordova: </b>' + device.cordova + '</p>';
-                    pgDeviceInfo += '<p><b>device.phonegap: </b>' + device.phonegap + '</p>';
-                    pgDeviceInfo += '<p><b>device.platform: </b>' + device.platform + '</p>';
-                    pgDeviceInfo += '<p><b>device.uuid: </b>' + device.uuid + '</p>';
-                    pgDeviceInfo += '<p><b>device.version: </b>' + device.version + '</p>';
-                } else {
-                    pgDeviceInfo += '<p><i>no data - not native app!! </i></p>';
-                }
-                var frame = window.frames[0].window;
-                frame.pgDeviceInfo = pgDeviceInfo;
-            }
-
-</script>
 <title>Independent Drivers Consortium -  Index</title>
 <!--<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">-->
 <meta name="viewport" content="width=device-width, initial-scale=1">	
@@ -192,6 +143,9 @@ img.center {
 			02-07-19 (12-12-25 PM)<br>
 			blank 1 add config 2 - viewport-fit=cover<br><br>
 			
+			
+			i took off top script<br><br>
+			
 			links<br><br>
 			
 <!--			      <input id="send-email-cert" type="button" class="buttonform2_24" name="submit" value= "Email Certificate<br>of Enrollment form" onClick="testResults(this.form)" />-->
@@ -200,7 +154,8 @@ img.center {
 			
 			
 			
-			<a href="test1.html" title="MT" rel="external">go test page 1</a>
+			
+			<a href="index.html" title="MT" rel="external">go index</a>
 			<br><br><br>
 			
 			
@@ -212,7 +167,15 @@ img.center {
 			
 			
 			
-			<a href="" title="MT" onClick="openBrowser()" >openBrowser 1 stay</a>
+			<a href="test.html" title="MT" rel="external">go test page</a>
+			<br><br><br>
+			
+			
+			
+			
+			
+			
+			<a href="" title="MT" onClick="openBrowser()" >openBrowser 1 cordova</a>
 			
 			<br><br><br>
 			
@@ -414,6 +377,9 @@ window.location.replace("login.html?tm=" + tm);
 	console.log('rev test Loading started: '  )	
 		
    var url = 'https://cordova.apache.org';
+	//var url = 'https://www.labcorp.com';	
+		
+		
    var target = '_blank';
    var options = "location = yes"
    var ref = cordova.InAppBrowser.open(url, target, options);

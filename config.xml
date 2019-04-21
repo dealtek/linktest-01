@@ -174,8 +174,11 @@ just android ios
 <gap:plugin name="cordova-plugin-vibration" source="npm" />
 
 <!-- no this starts with web <content src="https://idcapp.com" />-->
+	
 <allow-navigation href="https://idcapp.com/*" />
 <allow-navigation href="https://nortonmedical.com/*" />	
+<allow-navigation href="https://labcorp.com/*" />	
+<allow-navigation href="https://www.labcorp.com/*" />		
 
 <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 
